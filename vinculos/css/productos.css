@@ -1,0 +1,97 @@
+
+*{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'poppins', sans-serif;
+    }
+
+    body{
+        background:#f4f6f9;
+        font-family: '';
+    }
+
+    header{
+        background:#0A4D8C;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    header h1{
+        margin-bottom:5px;
+    }
+    
+
+    .mproductos{
+    margin: 40px 70px;
+}
+
+/* GRID en lugar de FLEX */
+.cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+/* TARJETA */
+.card{
+    background:#f1f1f1;
+    padding:20px;
+    border-radius:12px;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* HOVER correcto */
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* IMAGEN CONTROLADA */
+.card img{
+    width:100%;
+    height:200px;      /* tamaño fijo */
+    object-fit:contain; /* evita deformación */
+    background:white;
+    border-radius:10px;
+    padding:10px;
+}
+
+/* TEXTO */
+.card p{
+    text-align:center;
+    font-size:.85rem;
+    margin:15px 0;
+    min-height:60px; /* iguala altura */
+}
+
+/* BOTON */
+.card a{
+    text-decoration:none;
+    background:white;
+    color:#0A4D8C;
+    padding:8px 15px;
+    border-radius:8px;
+    font-size:.8rem;
+    font-weight:600;
+    transition:.3s;
+}
+
+.card a:hover{
+    background:#e3e3e3;
+}
+
+
+    footer{
+        background:#1e293b;
+        color:white;
+        text-align:center;
+        padding:15px;
+        margin-top:30px;
+    }

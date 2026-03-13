@@ -1,0 +1,202 @@
+.reparacion{
+    padding: 35px 20px;
+    /*margin-top: 110px;*/
+    background: linear-gradient(to bottom, #f4f6f8, #e9edf2);
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+.reparacion  > h2{
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.reparacion > h2::after{
+    content: "";
+    width: 200px;
+    height: 4px;
+    background: #1e3a8a;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.reparacion > p{
+    max-width: 850px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+.reparaciones   {
+display:flex;
+gap:50px;
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+align-items:center;
+}
+
+/* LISTA SERVICIOS */
+
+.servicios_lista{
+flex:1;
+}
+
+.servicios_lista h2{
+color:#0A4D8C;
+margin-top:20px;
+font-size:1.3rem;
+}
+
+.servicios_lista ul{
+margin:10px 0 20px 20px;
+}
+
+.servicios_lista li{
+margin-bottom:8px;
+font-size:0.95rem;
+text-align: justify;
+}
+
+/* SERVICIO DESTACADO */
+
+.servicio_destacado{
+flex:1;
+background:#f5f7fa;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.servicio_destacado h3{
+margin-bottom:20px;
+font-size:1.3rem;
+}
+
+.servicio_destacado img{
+width:100%;
+max-width:320px;
+height:240px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.servicio_destacado p{
+font-size:0.95rem;
+line-height:1.6;
+color:#444;
+margin-bottom:20px;
+}
+
+.servicio_destacado a{
+display:inline-block;
+background:#0A4D8C;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.servicio_destacado a:hover{
+background:#083a6b;
+}
+
+
+
+
+
+/* TABLET */
+
+@media (max-width:1024px){
+
+.reparaciones{
+flex-direction:column;
+gap:40px;
+text-align:center;
+}
+
+.servicios_lista{
+width:100%;
+}
+
+.servicios_lista ul{
+margin-left:0;
+list-style-position:inside;
+}
+
+.servicio_destacado{
+max-width:500px;
+margin:auto;
+}
+
+}
+
+/* CELULAR */
+
+@media (max-width:768px){
+
+.reparacion{
+padding:30px 15px;
+}
+
+.reparacion > h2{
+font-size:1.7rem;
+}
+
+.reparacion > p{
+font-size:0.95rem;
+}
+
+.reparaciones{
+flex-direction:column;
+gap:30px;
+}
+
+.servicio_destacado img{
+max-width:100%;
+height:auto;
+}
+
+.servicios_lista h2{
+font-size:1.2rem;
+}
+
+.servicios_lista li{
+font-size:0.9rem;
+text-align:left;
+}
+
+}
+
+/* CELULAR PEQUEÑO */
+
+@media (max-width:480px){
+
+.reparacion > h2{
+font-size:1.5rem;
+}
+
+.servicio_destacado{
+padding:20px;
+}
+
+.servicio_destacado h3{
+font-size:1.1rem;
+}
+
+.servicio_destacado p{
+font-size:0.9rem;
+}
+
+.servicio_destacado a{
+padding:8px 16px;
+font-size:0.9rem;
+}
+
+}

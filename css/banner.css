@@ -1,0 +1,126 @@
+.hero{
+    position: relative;
+    background-image: url(../img/portada.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Capa oscura para resaltar texto */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.45);
+}
+
+/* contenido encima del overlay */
+.hero h1,
+.hero p,
+.hero a{
+    position: relative;
+}
+
+/* TITULO */
+.hero h1{
+  color:#fff;
+  font-family:"FontFamilyLogo";
+  font-size:2rem;
+  letter-spacing:.5px;
+}
+
+/* TEXTO */
+.hero p{
+    color:#fff;
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+/* BOTON */
+.hero a{
+  text-decoration:none;
+  color:#fff;
+  background-color:#0A4D8C;
+  border-radius:30px;
+  padding:10px 15px;
+  margin-top:15px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+/* HOVER CORREGIDO */
+.hero a:hover{
+  background:#1E73E8;
+  transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width:480px){
+
+  .hero h1{
+    font-size:1.4rem;
+  }
+
+  .hero p{
+    font-size:.9rem;
+  }
+
+}
+
+
+
+
+
+
+
+/*.hero{
+    background-image: url(../img/portada.png);
+    background-size: cover;
+    /*min-height: calc(100vh - 80px); /* ajusta 80px según tu navbar */
+/*    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h1{
+  color: #ffff;
+  font-family:"FontFamilyLogo";
+  src:url(../fonts/GOODTIME.TTF)
+}
+.hero p{
+    color: #ffffff;
+    padding-top:3px;
+}
+.hero   a{
+  text-decoration: none;
+  color: #ffff;
+  background-color: #0A4D8C;
+  border-radius: 10px;
+  padding: 5px 5px;
+}
+
+.hero  :hover{
+  background: #1E73E8;
+}
+
+
+@media (max-width: 480px){
+  .hero h1{
+    font-size: .8rem;
+  }
+
+  .hero p{
+    font-size: .7rem;
+  }
+}

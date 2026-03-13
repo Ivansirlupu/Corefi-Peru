@@ -1,0 +1,134 @@
+.contacto{
+    padding: 35px 20px;
+    background: linear-gradient(to bottom, #f4f6f8, #e9edf2);
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+.contacto h2{
+  font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.contacto h2::after{
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: #1e3a8a;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.contenedor_contactos{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 150px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.iconos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.iconos img{
+    width: 40px;
+    transition: .3s;
+}
+
+
+.mapa{
+    width: 100%;
+    max-width: 400px;
+}
+
+.mapa iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: 0;
+}
+
+.formulario{ 
+    width: 380px;
+    padding: 35px;
+    background: #1e3a8a; /* azul corporativo */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario h3{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.formulario input,
+.formulario textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Botón */
+.formulario button{
+    width: 30%;          /* más ancho */
+    padding: 10px;         /* más pequeño */
+    /*background: #0f172a;*/
+    background-color:#3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.formulario button:hover{
+    background: #f4f4f4;
+    color: #1e3a8a;
+}
+
+
+@media(max-width:1024px){
+    .contenedor_contactos{
+        gap: 40px;
+    }
+}
+
+
+@media(max-width:768px){
+    .contenedor_contactos{
+        gap: 40px;
+    }
+}

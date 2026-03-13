@@ -1,0 +1,82 @@
+.productos{
+    padding: 35px 20px;
+    background: linear-gradient(to bottom, #f4f6f8, #e9edf2);
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+.productos h2{
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.productos h2::after{
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: #1e3a8a;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.productos p{
+    max-width: 850px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+.mproductos{
+    text-align:center;
+}
+
+
+.mproductos .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+.mproductos .cards .card {
+      background: #f1f1f1;
+      padding: 25px;
+      width: 280px;
+      border-radius: 8px;
+      transition: .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 400px;
+}
+.mproductos .cards .card h3{
+    font-size: 1rem;
+    min-height: 40px;
+}
+.mproductos .cards .card img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);      
+}
+.mproductos .cards .card .vermas{
+  background:#0A4D8C; 
+  color:#fff;
+  border:none;
+  padding:10px;
+  margin-top: 15px;
+  cursor:pointer;
+  border-radius: 10px;
+  display: block;
+}
+.mproductos .cards .card  a{
+  text-decoration: none;
+  color:#fff;
+}
+.mproductos .cards .card .vermas:hover{
+  background: #1E73E8;
+}
