@@ -55,7 +55,7 @@ if(isset($_POST['nombre'], $_POST['email'], $_POST['mensaje'])){
             $mail->send();
 
             // Redirigir a página de éxito
-            header("Location: ./enviado.html");
+            echo "ok";
             exit();
 
         } catch (Exception $e) {

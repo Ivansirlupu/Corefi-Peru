@@ -38,8 +38,8 @@
 
 <section class="nosotros" id="nosotros">
   <h2>¿Quiénes Somos?</h2>
-  <p>COREFI, Es una empresa peruana dedicada al
-suministro, servicios y proyectos de refrigeración industrial.
+  <p>COREFI, Es una empresa peruana dedicada a la venta de
+suministros y equipos, servicios y proyectos de refrigeración industrial.
 COREFI, es representante post venta de BINGSHAN
 una de las empresa más grande de China.</p>
 
@@ -168,16 +168,13 @@ una de las empresa más grande de China.</p>
       </div>
 
       <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.73529677366!2d-80.68390942644929!3d-5.303938994674383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a1946d6ef5971%3A0x55bccface0bef98!2sRFRIO%20PERU!5e0!3m2!1ses!2spe!4v1770814014402!5m2!1ses!2spe" 
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.5892884003893!2d-80.68518521213069!3d-5.30719874678886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a198981688b2d%3A0x75d0dab97635b377!2sbotica%20y%20perfumeria%20Elohim!5e0!3m2!1ses!2spe!4v1773704370375!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
     <!-- Formulario -->
     <div class="formulario">
-  <form action="vinculos/enviar.php" method="post">
+  <form  id= "formContacto" action="vinculos/enviar.php" method="post">
     <h3>FORMULARIO DE CONTACTO</h3>
 
     <label>Nombre completo</label>
@@ -191,6 +188,13 @@ una de las empresa más grande de China.</p>
 
     <button type="submit">Enviar</button>
 </form>
+
+<!--MODAL-->
+
+<dialog id="modalMensaje">
+  <p>✅ Tu mensaje ha sido enviado</p>
+  <button onclick="document.getElementById('modalMensaje').close()">Cerrar</button>
+</dialog>
 
 </div>
 
@@ -265,7 +269,31 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+<!--SCRIP MODAL-->
 
+
+<script>
+const form = document.getElementById("formContacto");
+const modal = document.getElementById("modalMensaje");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const datos = new FormData(form);
+
+    fetch("vinculos/enviar.php", {
+        method: "POST",
+        body: datos
+    })
+    .then(res => res.text())
+    .then(respuesta => {
+        if(respuesta.trim() === "ok"){
+            modal.showModal();
+            form.reset();
+        }
+    });
+});
+</script>
 
 
 </body>

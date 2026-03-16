@@ -1,1 +1,1 @@
-alert("Mensaje enviado");
+alert("Mensaje enviado, Nos estaremos comunicando con usted.");
